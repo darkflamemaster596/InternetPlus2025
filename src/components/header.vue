@@ -15,33 +15,34 @@ importAllImages();
 </script>
 <template>
     <!-- 包括一个搜索框以及一个轮播图 -->
-    <header class="header">
+    <div class="header">
         <div class="inputBox">
-        <el-input
-        v-model="input"
-        style="width: 40%;height: 50px"
-        :suffix-icon="Search"
-        placeholder=""
-        class="input"
-        >
-            <template #append class="search"><el-button>搜索</el-button></template>  
-        </el-input>
-    </div>
-    <div class="carouselBox">
-        <div class="carousel">
-        <el-carousel height="auto" motion-blur>
-          <el-carousel-item style="height: auto;" v-for="(pic,index) in pics" :key="index">
-            <img :src="pic">
-          </el-carousel-item>
-        </el-carousel>
+            <el-input
+            v-model="input"
+            style="width: 40%;height: 50px"
+            :suffix-icon="Search"
+            placeholder=""
+            class="input"
+            >
+                <template #append ><el-button class="search">搜索</el-button></template>  
+            </el-input>
+        </div>
+        <div class="carouselBox">
+            <div class="carousel">
+            <el-carousel height="auto" motion-blur>
+              <el-carousel-item style="height: auto;" v-for="(pic,index) in pics" :key="index">
+                <img :src="pic">
+              </el-carousel-item>
+            </el-carousel>
+            </div>
         </div>
     </div>
-    </header>
 </template>
 <style scoped>
     .input{
         border-style: solid;
         border-width: 2px;
+        border-radius: 5px;
         border-color:var(--base-red);
         margin: 0 auto;
     }
@@ -56,7 +57,7 @@ importAllImages();
     }
     .carousel{
         height: auto;
-        max-height: 902px;
+        max-height: auto;
     }
     .carousel img{
         width: 100vw;
@@ -66,4 +67,5 @@ importAllImages();
     .header{
         width: 100vw;
     }
+
 </style>
