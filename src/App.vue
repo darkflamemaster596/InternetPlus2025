@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './components/header.vue';
 import Nvi from './components/nvi.vue';
+import Footer from './components/footer.vue';
 import { RouterView } from 'vue-router';
 </script>
 
@@ -9,12 +10,13 @@ import { RouterView } from 'vue-router';
         <Header></Header>
         <Nvi></Nvi>
         <RouterView></RouterView>
+        <Footer></Footer>
     </div>
 </template>
 
 <style >
     .container{
-        width: 100vw;
+        width: 100%;
         margin: 0 atuo;
     }
     body{

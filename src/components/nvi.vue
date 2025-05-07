@@ -43,7 +43,7 @@ import { RouterLink } from 'vue-router';
 <style scoped>
     .niv{
         margin-top: 10px;
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-around;
     }

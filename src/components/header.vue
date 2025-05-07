@@ -60,12 +60,13 @@ importAllImages();
         max-height: auto;
     }
     .carousel img{
-        width: 100vw;
+        width: 100%;
         height: auto;
         object-fit: cover;
     }
     .header{
-        width: 100vw;
+        /* width: 100vw; */
+        width: 100%;
     }
 
 </style>
