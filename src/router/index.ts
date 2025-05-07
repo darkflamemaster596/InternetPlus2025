@@ -1,37 +1,35 @@
-import {createRouter,createWebHistory} from 'vue-router'
-import education from '../pages/education.vue';
-import work from '../pages/work.vue';
-import home from '../pages/home.vue';
-import market from '../pages/market.vue';
-import explore from '../pages/explore.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+
 const router = createRouter({
-    history:createWebHistory(),
-    routes:[
+    // 使用 Vite 的环境变量配置基础路径
+    history: createWebHistory(),
+    routes: [
         {
-            name:'home',
-            path:'/',
-            component:home
+            name: 'home',
+            path: '/',
+            component: () => import('@/pages/home.vue')
         },
         {
-            name:'work',
-            path:'/work',
-            component:work
+            name: 'work',
+            path: '/work',
+            component: () => import('@/pages/work.vue')
         },
         {
-            name:'education',
-            path:'/education',
-            component:education
+            name: 'education',
+            path: '/education',
+            component: () => import('@/pages/education.vue')
         },
         {
-            name:'explore',
-            path:'/explore',
-            component:explore
+            name: 'explore',
+            path: '/explore',
+            component: () => import('@/pages/explore.vue')
         },
         {
-            name:'market',
-            path:'/market',
-            component:market
+            name: 'market',
+            path: '/market',
+            component: () => import('@/pages/market.vue')
         },
     ]
-});
-export default router;
+})
+
+export default router
