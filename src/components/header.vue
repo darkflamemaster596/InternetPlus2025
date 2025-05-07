@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref,onMounted } from 'vue';
+import { ref } from 'vue';
 import { Search } from '@element-plus/icons-vue'
 const input = ref('');
 const pics = ref<string[]>([]);
@@ -29,9 +29,9 @@ importAllImages();
         </div>
         <div class="carouselBox">
             <div class="carousel">
-            <el-carousel height="auto" motion-blur>
+            <el-carousel height="auto" motion-blur  :autoplay="false">
               <el-carousel-item style="height: auto;" v-for="(pic,index) in pics" :key="index">
-                <img :src="pic">
+                <img :src="pic" style="width: 100%;object-fit: cover;height: auto;">
               </el-carousel-item>
             </el-carousel>
             </div>
@@ -59,13 +59,12 @@ importAllImages();
         height: auto;
         max-height: auto;
     }
-    .carousel img{
+    .carouse img{
         width: 100%;
         height: auto;
         object-fit: cover;
     }
     .header{
-        /* width: 100vw; */
         width: 100%;
     }
 
