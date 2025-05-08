@@ -22,11 +22,13 @@ videos.value.push(new Item('','【技艺传承】','汴彩技艺4——整理装
 videos.value.push(new Item('','【工匠精神】','开封汴京灯笼张，百年传承，只为一盏灯'))
 //读取/assets/cover中的所有图片
 const importAllImages = async () => {
-    const images = import.meta.glob('@/assets/video/*.{png,jpg,jpeg,gif,svg}');
+    const images = import.meta.glob('@/assets/video/*.{png,jpg,jpeg,gif,svg}',{as:'url'});
     let count = 0;
     for (let cover in images) {
-        videos.value[count].cover=cover;
-        count++;
+        images[cover]().then((res)=>{
+            videos.value[count].cover=res;
+            count++;
+        })
     }
 };
 importAllImages();
@@ -49,7 +51,7 @@ const imgLoad = () => {
                     imgHeight.value=maxHeight+'px';
                 }
             }
-        },100);
+        },200);
     });
 };
 
