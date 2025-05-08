@@ -25,7 +25,7 @@ importAllImages();
                     lazy
                     fit="cover"
                     :preview-src-list="pics" 
-                    style="width: 25%;object-fit: cover;height: auto;"
+                    style="width: 20%;object-fit: cover;height: auto;"
                 ></el-image>
             </div>
         </div>
@@ -50,5 +50,6 @@ importAllImages();
         border-width: 5px;
         display: flex;
         flex-wrap: wrap;
+        padding: 1%;
     }
 </style>
