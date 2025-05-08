@@ -31,11 +31,12 @@ import { RouterLink } from 'vue-router';
         display: inline-block;
         text-decoration: none;
         color: black;
-        font-size: large;
+        font-size: var(--font-size-normal);
     }
     .copyright{
         margin-top: 15px;
         float: right;
         margin-right: 20px;
+        font-size: var(--font-size-normal);
     }
 </style>

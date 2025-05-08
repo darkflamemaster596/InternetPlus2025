@@ -7,5 +7,7 @@
     /*灰色,教育资源第二个轮播卡片底色*/
     --base-grey:#e5e5e5;
     /*作品展示中的金色边框*/
-    --base-gold:#ffc000
+    --base-gold:#ffc000;
+    --font-size-normal:clamp(14px, 2vw, 20px);
+    --font-size-large:clamp(21px, 3vw, 30px);
 }

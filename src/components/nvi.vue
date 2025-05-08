@@ -51,7 +51,7 @@ import { RouterLink } from 'vue-router';
         height: 50px;
         text-align: center;
         line-height: 50px;
-        font-size: larger;
+        font-size: var(--font-size-normal);
         text-decoration: none;
         color: black;
     }

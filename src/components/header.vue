@@ -7,7 +7,7 @@ const pics = ref<string[]>([]);
 const importAllImages = () => {
     const images = import.meta.glob('@/assets/cover/*.{png,jpg,jpeg,gif,svg}');
     for (let image in images) {
-        pics.value.push('.'+image);
+        pics.value.push(image);
     }
 };
 // 调用函数加载图片
@@ -19,17 +19,17 @@ importAllImages();
         <div class="inputBox">
             <el-input
             v-model="input"
-            style="width: 40%;height: 50px"
+            style="width: 55%;height: clamp(30px, 2vw, 50px)"
             :suffix-icon="Search"
             placeholder=""
             class="input"
             >
-                <template #append ><el-button class="search">搜索</el-button></template>  
+                <template #append ><el-button class="search"><span style="font-size: clamp(14px, 2vw, 20px);line-height: 100%;">搜索</span></el-button></template>  
             </el-input>
         </div>
         <div class="carouselBox">
             <div class="carousel">
-            <el-carousel height="auto" motion-blur  :autoplay="false">
+            <el-carousel height="auto" motion-blur  :autoplay="true">
               <el-carousel-item style="height: auto;" v-for="(pic,index) in pics" :key="index">
                 <img :src="pic" style="width: 100%;object-fit: cover;height: auto;">
               </el-carousel-item>

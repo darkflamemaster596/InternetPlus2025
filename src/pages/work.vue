@@ -25,7 +25,7 @@ importAllImages();
                     lazy
                     fit="cover"
                     :preview-src-list="pics" 
-                    style="width: 33.33%;object-fit: cover;height: auto;"
+                    style="width: 25%;object-fit: cover;height: auto;"
                 ></el-image>
             </div>
         </div>
@@ -34,12 +34,14 @@ importAllImages();
 <style scoped>
     .outerBox{
         background-color: var(--base-red);
-        padding: 20px;
+        padding: clamp(20px, 2vw, 40px);
+        border-radius: 5px;
     }
     .container{
         width: 90%;
         height: auto;
         margin: 20px auto;
+        
     }
     .innerBox{
         border-radius: 10px;

@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-    <div class="container">
+    <div class="containerOfIndex">
         <Header></Header>
         <Nvi></Nvi>
         <RouterView></RouterView>
@@ -15,7 +15,7 @@ import { RouterView } from 'vue-router';
 </template>
 
 <style >
-    .container{
+    .containerOfIndex{
         width: 100%;
         margin: 0 atuo;
     }
@@ -29,5 +29,4 @@ import { RouterView } from 'vue-router';
     .search > span{
         color: black;
     }
-    
 </style>
