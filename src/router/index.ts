@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
     // 使用 Vite 的环境变量配置基础路径
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     scrollBehavior(to, from, savedPosition) {
         // 如果有保存的滚动位置，则返回保存的位置
         if (savedPosition) {
